@@ -11,6 +11,8 @@ class LoginController {
         require_once '../../config/config.php';
         require_once '../../config/db.php';
         require_once '../models/User.php';
+        require_once __DIR__ . '/../helpers.php';  
+
         if (is_post()) {
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
